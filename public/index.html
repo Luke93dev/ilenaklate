@@ -188,7 +188,7 @@
            
             function ToggleClass(){if (document.documentElement.scrollTop || document.body.scrollTop > 500){ buttonUp.style.opacity = "1";} else buttonUp.style.opacity = "0";}
             
-        window.addEventListener('scroll', function(){if(mobileViewport.matches){ToggleClass()}})
+        window.addEventListener('scroll', function(){if(mobileViewport.matches){ToggleClass()}else{buttonUp.style.display="none";}})
             
                        
             ////////////////////////////////////////////////////
