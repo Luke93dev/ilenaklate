@@ -1,0 +1,287 @@
+.main{
+   /* background-image: url(../images/b.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:left;*/
+    color:white; 
+    position:relative;
+    z-index:-1;
+    text-align:center;
+}
+
+
+.form-section{
+    position:relative;
+    padding:10% 0;
+     //   border-bottom:4px solid red;
+    @include mobile-landscape{ 
+        padding:5%;
+    }
+    @include desctop{
+        height:100%;
+        padding:2%;
+        padding-bottom:6%;
+    }
+     &:before{
+       content: "";
+        width: 70%;
+        height: 100%;
+        border-top: 5px solid red;
+        margin: 0 auto;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 15%;
+        z-index: -100;
+         margin-top:-1%;
+    }
+    &:after{
+       content: "";
+        width: 70%;
+        height: 100%;
+        border-bottom: 5px solid red;
+        margin: 0 auto;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 15%;
+        z-index: -100;
+    }
+    &__title{
+        margin: auto;
+        padding: 2%;
+        font-size: 2.6em;
+        font-family: 'Chelsea Market', cursive;
+        color: red;
+        background: rgba(0, 0, 0, 0.65);
+        border-radius: 5%;
+        @include small-mobile{
+            font-size:2.2em;
+        }
+        @include mobile-landscape{
+            padding-top:2%;  
+        }
+        @include small-tablet-portrait{
+            font-size:4.4em;
+        }
+        @include large-tablet-portrait{
+            font-size:4.8em;
+        }
+        @include large-tablet-landscape{
+            font-size:4.5em;
+         }
+        @include desctop{
+            font-size:4.2em;
+            border-radius:0;
+            width:50%;
+            background: rgba(0, 0, 0, 0.45);
+         }   
+        }
+    &__paragraph{
+        font-size:1.6em;
+        padding:10%;
+        @include small-mobile{
+            font-size:1.4em;
+        }
+        @include mobile-landscape{
+            padding:2%;
+        }
+        @include small-tablet-portrait{
+            font-size:2.2em;
+        padding-top:40px;
+        }
+        @include large-tablet-portrait{
+            font-size:2.5em;
+            padding-bottom:5%;
+        }
+        @include small-tablet-landscape{ 
+            padding-top:3%;
+        }     
+        @include large-tablet-landscape{
+            font-size:2em;
+         }
+        @include desctop{
+            font-size:1.8em;
+        }   
+        &--error{
+            width:80%;
+            margin:0 auto;
+            padding:2%;
+            color:white;
+            border:2px dashed white; 
+            @include mobile-landscape{
+                 width:50%;
+              
+            }
+            @include small-tablet-portrait{
+                padding:5% 3%;  
+                border-width:3px;     
+            }
+            @include small-tablet-landscape{ 
+                animation: fadein 0.5s;
+                 right:7%;
+                 bottom:13%;
+                 padding-top:2%;
+                width:80%;
+                margin-left:0;
+                @keyframes fadein {
+                0% { opacity: 0; }
+                100%   { opacity: 1; }
+                }
+            }
+            @include large-tablet-landscape{ 
+                bottom:15%;
+            }
+            @include desctop{
+                 font-size:1.6em;
+                 margin-left:-12%;
+             }
+            }}
+    &__wrapper-content{
+        @include small-tablet-landscape{ 
+            display:flex;
+            flex-direction:row;
+            justify-content:space-between;
+            align-items:flex-end;
+        }}
+    &__form{
+        @include small-tablet-landscape{  
+            width:50%;
+        }}
+    &__fieldset{
+        border:none;
+        @include mobile-landscape{
+            width:100%;
+            margin-top:3%;
+        }
+         @include small-tablet-landscape{ 
+             width:100%;
+        }        
+        @include large-tablet-portrait{
+            margin-top:20px;
+        }
+        @include desctop{
+            width:100%;
+          
+        }
+        }
+    &__input{
+        display:block;
+        margin:3% auto 7%;
+        border:1px solid black;
+        font-size:1.4em;
+        text-align:center;
+        @include mobile-landscape{
+             margin:2% auto 5%;
+        }
+        @include small-tablet-portrait{
+            font-size:2em;
+            font-weight:700;
+        }
+        @include large-tablet-portrait{
+            font-size:2.6em;
+        }
+        @include small-tablet-landscape{
+            margin:2% auto;
+        }
+        @include large-tablet-landscape{ 
+            margin-bottom:5%;
+           //  font-size:1.8em;
+         }
+        @include desctop{
+           font-size:1.6em;
+           margin-top:2%;
+        } 
+        }
+    &__label{
+        display:block;
+        font-size:2em;   
+        @include mobile-landscape{
+        }
+        @include small-tablet-portrait{
+            font-size:3em;   
+        }
+        @include large-tablet-portrait{
+            font-size:3.4em;
+        }
+        @include small-tablet-landscape{ 
+            padding-bottom:0;
+            padding-top:2%;
+        }
+        @include large-tablet-landscape{
+            font-size:2.6em;
+         }
+        @include desctop{
+           font-size:2em;
+        } 
+        }
+    &__submit-button{
+        display:block;
+        height:50px;
+        width:30%;
+        font-size:1.8em;
+        margin:10% auto 5%;
+        border-radius:5px;
+        border:none;
+        cursor:pointer;
+        background-color: red;
+        color: white;
+        @include mobile-landscape{
+            margin:5% auto;
+        }
+        @include small-tablet-portrait{
+            width:35%;
+            height:65px;
+            font-size:2.8em;
+        }
+        @include large-tablet-portrait{
+            font-size:3em;
+        }
+        @include small-tablet-landscape{ 
+             right:65.5%;
+             top:55%;
+             width:20%;
+        }}
+    
+    &__wrapper-content2{
+        @include small-tablet-landscape{
+            width:50%;
+            display:flex;
+            flex-direction:column;
+        } }
+   
+    &__image{
+            @include small-tablet-landscape{
+                position:absolute;
+                top:-32%;
+                right:-13%;
+                background-image:url(../images/bench.png);  
+                height:1000px;
+                width:1000px;
+                transform: scale(0.35, 0.35);
+               // filter: invert(100%); 
+                @include large-tablet-landscape{
+                    transform: scale(0.4, 0.4);
+                    top:-10%;
+                     right:-2%;
+                    }
+                @include desctop{
+                 transform: scale(0.35, 0.35);
+                 top: -12%;
+                 right: 4%;
+                } 
+                &--transition{
+                   transform: scale(0.25, 0.25) translateY(-150px); 
+                    transition:1s  ease;
+                    @include large-tablet-landscape{
+                        transform: scale(0.3, 0.3) translateY(-120px); 
+                        transition:1s  ease;
+                        }
+                    @include desctop{
+                        transform: scale(0.3, 0.3) translateY(-150px); 
+                        transition:1s  ease;
+                    }
+                }}
+        
+    }}
+    

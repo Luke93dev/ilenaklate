@@ -1,0 +1,58 @@
+// Variables //
+
+$small-mobile:400px;
+$small-tablet:600px;
+$large-tablet:800px;
+$small-tablet-landscape:1000px;
+$large-tablet-landscape:1280px;
+$desctop:1360px;
+
+
+
+// Mixins //
+
+@mixin small-mobile {
+@media (max-width: $small-mobile) {
+@content;
+    }}
+
+@mixin mobile-landscape-and-other {
+@media screen and (min-width: $small-tablet) {
+@content;
+    }}
+
+@mixin mobile-landscape {
+@media screen and (orientation: landscape) {
+@content;
+    }}
+
+@mixin small-tablet-portrait {
+@media screen and (min-width:$small-tablet) and (orientation: portrait) {
+@content;
+    }}
+
+@mixin large-tablet-portrait {
+@media screen and (min-width:$large-tablet) and (orientation: portrait) {
+@content;
+    }}
+
+
+@mixin small-tablet-landscape {
+@media screen and (min-width: $small-tablet-landscape) and (orientation: landscape) {
+@content;
+    }}
+
+@mixin large-tablet-landscape {
+@media screen and (min-width: $large-tablet-landscape) and (orientation: landscape) {
+@content;
+    }}
+
+@mixin desctop {
+@media screen and (min-width:$desctop) {
+@content;
+    }}
+
+@mixin title {
+   font-family: 'Chelsea Market', cursive;
+    color:white;
+}

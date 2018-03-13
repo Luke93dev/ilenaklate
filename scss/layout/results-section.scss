@@ -1,0 +1,397 @@
+
+.results-section{
+    padding:5% 0 10%;
+  //  border-bottom:5px solid red;
+   /*  background-image: url(../images/b.png);
+    background-size:cover;
+    background-position: bottom;*/
+    //position:relative;
+    @include mobile-landscape{
+        padding:5% 0;}
+    @include desctop{
+        height:100%;
+        padding:0;
+        padding-bottom:8%;
+    }
+    &__title{
+        padding:5%;
+        padding-bottom:3%;
+        font-size:2em;
+        font-family: 'Chelsea Market', cursive;
+        @include mobile-landscape{
+            padding:3%;
+            padding-bottom:1%;
+        }
+        @include small-tablet-portrait{
+            font-size:3.2em;   
+        }
+        @include large-tablet-portrait{
+            font-size:3.8em;
+        }
+        @include small-tablet-landscape{ 
+            font-size:2.4em;
+        }
+        @include large-tablet-landscape{ 
+            font-size:3em;
+        }
+         @include desctop{
+              padding-bottom:2%;
+             } 
+    }
+    &__result{
+        font-size:3.8em;
+        padding:2%;
+        width:70vw;
+        margin:0 auto;
+        border-bottom:3px solid white;
+        color:#ff0000;
+        @include mobile-landscape{
+            padding-top:0;
+        }
+        @include small-tablet-portrait{
+            font-size:5em;
+            border-bottom-width:4px;
+        }
+        @include large-tablet-portrait{
+            font-size:6em;
+            border-bottom-width:6px;
+        }
+        @include small-tablet-landscape{ 
+             font-size:4em;
+             border-bottom-width: 4px;
+             margin-bottom:2%;
+             padding-top:1.5%;
+     }
+        @include desctop{
+              padding:1%;
+              margin-bottom:0;
+             } 
+        }
+    &__wrapper-results{
+        @include mobile-landscape{
+            display:flex;
+            width:100%;
+            margin-top:5%;
+            padding:2%;
+            padding-top:0;
+        }}
+    &__paragraph{
+        padding:3%;
+        font-size:1.45em;
+        padding-top:1%;
+        @include small-mobile{
+            padding-bottom:0;
+            font-size:1.3em;
+        }
+        @include mobile-landscape{
+            width:50vw;
+            font-size:1.4em;
+            padding-top:0;
+        }
+        @include small-tablet-portrait{
+            font-size:2.4em;
+        }   
+        @include large-tablet-portrait{
+            font-size:2.8em;
+        }
+        @include small-tablet-landscape{ 
+            font-size:1.6em;
+        }
+        @include large-tablet-landscape{ 
+            font-size:2.2em;
+         }
+        @include desctop{
+           font-size:2em;
+        }
+        &::after {
+            width: 35%;
+            border-bottom: 3px solid red;
+            content: "";
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 4%;
+            @include mobile-landscape{
+                padding-top:6%;
+                border-width:2px;
+            }
+            @include small-tablet-portrait{
+                border-width:3px;
+            }
+            @include small-tablet-landscape{
+                border-width:3px;
+            }
+            }
+        &--first{
+            padding-top:10%;
+            @include mobile-landscape{
+                padding-top:5%;
+            }
+            @include large-tablet-landscape{
+                padding-top:8%;
+            }
+            @include desctop{
+                padding-top:4%;
+            }
+        }
+        &--last::after{
+            content:none;
+        }
+        &--advice{
+            padding:4% 9%;
+            margin-top:8%;
+            margin-left:auto;
+            margin-right:auto;
+            border-radius:10px;
+            font-size:1.4em;
+            color:red;
+            background: rgba(0, 0, 0, 0.6);
+            &::after{
+                content:none;
+            }
+            @include mobile-landscape{
+                width:50%;
+                font-size:1.2em;
+                overflow:hidden;
+                color:#ff0000;
+                margin-top:0;
+                padding:2% 0;
+            }
+            @include small-tablet-portrait{
+                font-size:2.2em;
+                }
+            @include large-tablet-portrait{
+                font-size:2.6em;
+                }
+            @include small-tablet-landscape{
+                font-size:1.6em;
+             }
+            @include large-tablet-landscape{
+                font-size:2em;
+             }
+            @include desctop{
+                 font-size:1.8em;
+                 width:40vw;
+                 line-height:135%;
+                 margin:0;
+             }
+             }          
+}
+
+
+}
+/*
+.arrow-button--up{
+    position:absolute;
+    margin-left:auto;
+    margin-right:auto;
+    bottom:2%;
+    font-size:4em;
+    @include mobile-landscape{
+         right:45%;
+    }
+}
+.fa-arrow-circle-o-up{
+    animation:arrow 3s infinite ease;
+    cursor:pointer;
+    
+}
+*/
+.advices-section{
+    padding:10% 5%;
+    position:relative;
+ //   border-bottom:5px solid red;
+    @include mobile-landscape{
+        padding:5%;
+    }
+     @include desctop{
+         padding:2%;
+         
+    }
+    &:before{
+       content: "";
+        width: 70%;
+        height: 100%;
+        border-top: 5px solid red;
+        margin: 0 auto;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 15%;
+        z-index: -100;
+    }
+    &:after{
+       content: "";
+        width: 70%;
+        height: 100%;
+        border-bottom: 5px solid red;
+        margin: 0 auto;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 15%;
+        z-index: -100;
+    }   
+    &__title{
+        margin: auto;
+        padding: 2%;
+        font-size: 2.8em;
+        font-family: 'Chelsea Market', cursive; 
+        color:white;
+        @include small-tablet-portrait{
+            font-size:3.6em;
+        }
+        @include large-tablet-portrait{
+            font-size:4.4em;
+        }
+        @include large-tablet-landscape{
+            font-size:4.2em;
+        }
+        @include desctop{
+            font-size:4em;
+            padding-bottom:3%;            
+        }
+        
+        
+    }
+    &__subtitle{
+        color:red;
+        font-size:2em;
+        padding:8% 0 4%;
+        @include mobile-landscape{
+            padding:4%;
+        }
+         @include small-tablet-portrait{
+            font-size:2.5em;
+        }
+        @include large-tablet-portrait{
+            font-size:3em;
+        }
+        @include large-tablet-landscape{
+            font-size:2.4em;
+        }
+        @include desctop{
+            font-size:2.4em;
+            padding:2%;
+        }
+        &--training{
+            width:90%;
+            margin-left:auto;
+            margin-right:auto;
+            border:6px solid white;
+            background:rgba(0, 0, 0, 0.65);
+            border-bottom:none;
+            padding:1.5%;
+            margin-top:10%;
+            @include mobile-landscape{
+                width:60%;
+            }
+            @include large-tablet-landscape{
+                margin-top:5%;
+                font-size:2.8em;
+        }
+            @include desctop{
+                border-width:6px;           
+                width:60%;           
+                font-size:2.8em;
+                margin-top:2%;         
+            }}
+    }
+    &__paragraph{
+        font-size:1.4em;
+        line-height:1.4em;
+        padding:2%;
+        @include mobile-landscape{
+            padding:0 5% 2%;
+        }
+        @include small-tablet-portrait{
+            font-size:1.8em;
+        }
+        @include large-tablet-portrait{
+            font-size:2.2em;
+        }
+        @include large-tablet-landscape{
+            font-size:1.8em;
+        }
+         @include desctop{
+             padding:0 15% 2%;
+             font-size:1.6em;
+             line-height: 1.4em;
+        }       
+    }  
+    &__list{
+        font-size:1.4em;   
+        padding:2%;
+        width:90%;
+        margin:0 auto;
+        @include mobile-landscape{
+            width:60%;
+            margin-bottom:5%;
+        }
+        @include desctop{
+            font-size:1.6em;
+            border-radius:0;
+        }
+        
+        &--training{
+            border:5px solid white;
+            list-style-type:none;
+            line-height:1.5em;
+            margin-bottom:12%;
+            background:rgba(0, 0, 0, 0.65);
+            @include mobile-landscape{
+                margin-bottom:8%;
+            }
+             @include small-tablet-portrait{
+                 font-size:1.8em;
+            }
+            @include large-tablet-portrait{
+                font-size:2.2em;
+            }
+            @include large-tablet-landscape{
+                font-size:1.8em;
+        }
+            @include desctop{
+                border-width:6px;
+                margin-bottom:5%;
+                
+            }
+            &::after{
+                padding-top:5%;
+                display:block;
+                content:"* CM - Twój ciężar maksymalny wg kalkulatora";
+                float:left;
+            }
+        }
+        &--hints{
+           padding:0; 
+           @include small-tablet-portrait{
+            font-size:1.8em;
+            }
+            @include large-tablet-portrait{
+            font-size:2.2em;
+            }
+            @include desctop{
+                text-align:left;  
+                font-size:1.1em;
+            }}}
+    &__list-item1::after{
+        display:block;
+        margin:0 auto;
+        content:"";
+        width:30%;
+        border-bottom:1px solid red;
+        @include small-tablet-portrait{
+            border-width:2px;
+            }
+        @include desctop{
+            border-width:2px;
+        }}
+     &__list-item2{
+         padding:1.5%;
+         @include large-tablet-landscape{
+            font-size:1.4em;
+        }
+     } 
+    
+    }
