@@ -21,6 +21,9 @@
     @include small-tablet-landscape{ 
         height:9%;
      }
+    @include large-desctop{
+        height:70px;
+    }
     }
 
 
@@ -65,6 +68,9 @@
         @include desctop{
             justify-content: flex-end;
         }   
+        @include large-desctop{
+            height:70px;
+        }         
         }
     &__list-item{   
         margin:0;
@@ -144,6 +150,9 @@
         @include desctop{
             font-size:1.6em;
          }
+         @include large-desctop{
+             font-size:2em;
+        }
         }
     &__content{
          position:Relative;
@@ -216,7 +225,11 @@
              top:-50%;
              left:7%;
              } 
-        }
+         @include large-desctop{
+             font-size:8.5em;
+             top:-65%;
+             left:10%;
+        }}
     &__paragraph-wrapper{
         width: 90%;
         background: rgba(0, 0, 0, 0.65);
@@ -239,7 +252,9 @@
             border-color:red;
             margin-bottom:0;
              }
-        }
+        @include large-desctop{
+            margin-top:15%;
+        }}
     &__paragraph{
         font-size:0.9em;
         padding:2% 5%;
@@ -270,6 +285,9 @@
         @include desctop{
             font-size:1.4em;
              padding:1%;
+        }
+         @include large-desctop{
+             font-size:1.8em;
         }
         
     }}   
@@ -310,8 +328,11 @@
         color:red;
         text-align:center;
         margin-bottom:5%;
-    }}
-
+    }
+ @include large-desctop{
+     font-size:7em;
+    }
+}
 .fa-chevron-circle-down{
     animation:arrow 3s infinite ease;
     cursor:pointer;

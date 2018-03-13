@@ -34,6 +34,9 @@
         @include large-tablet-portrait{
             font-size:6em;
         }
+        @include large-desctop{   
+            font-size:6em;
+        }
     }
     &__paragraph{
         font-size:1.6em;
@@ -62,6 +65,9 @@
         @include desctop{
             padding-bottom:0;
         }
+        @include large-desctop{   
+            font-size:2.4em;
+        }
     }
     &__form-header{
         margin-top:20%;
@@ -84,7 +90,9 @@
         @include small-tablet-landscape{
             width:60%;
         }
-        }
+        @include large-desctop{
+            font-size:3.4em;
+        }}
     &__fieldset{
         margin:0 10% 20%;
         border: 5px solid white;
@@ -108,7 +116,9 @@
         @include large-tablet-portrait{
             font-size:3em;
         }
-        }
+        @include large-desctop{
+            font-size:2.4em;
+        }}
     &__submit-button{
         width:80%;
         height:40px;
@@ -128,5 +138,8 @@
             margin-top:5%;
             height:60px;
         }
-        }    
+        @include large-desctop{
+            height:60px;
+            font-size:2.6em;
+        }   } 
         }

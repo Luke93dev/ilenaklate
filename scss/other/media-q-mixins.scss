@@ -6,7 +6,8 @@ $large-tablet:800px;
 $small-tablet-landscape:1000px;
 $large-tablet-landscape:1280px;
 $desctop:1360px;
-
+$large-desctop:1600px;
+$larger-desctop:1900px;
 
 
 // Mixins //
@@ -49,6 +50,15 @@ $desctop:1360px;
 
 @mixin desctop {
 @media screen and (min-width:$desctop) {
+@content;
+    }}
+
+@mixin large-desctop {
+@media screen and (min-width:$large-desctop) {
+@content;
+    }}
+@mixin larger-desctop {
+@media screen and (min-width:$larger-desctop) {
 @content;
     }}
 

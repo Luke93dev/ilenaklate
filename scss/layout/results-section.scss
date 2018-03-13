@@ -8,6 +8,9 @@
         padding:0;
         padding-bottom:8%;
     }
+    @include large-desctop{   
+           padding-bottom:10%; 
+        }
     &__title{
         padding:5%;
         padding-bottom:3%;
@@ -32,6 +35,9 @@
          @include desctop{
               padding-bottom:2%;
              } 
+        @include large-desctop{
+            font-size:4em;
+        }
     }
     &__result{
         font-size:3.8em;
@@ -61,6 +67,9 @@
               padding:1%;
               margin-bottom:0;
              } 
+        @include large-desctop{
+            font-size:6em;
+        }
         }
     &__wrapper-results{
         @include mobile-landscape{
@@ -97,6 +106,9 @@
          }
         @include desctop{
            font-size:2em;
+        }
+        @include large-desctop{   
+          font-size:2.6em; 
         }
         &::after {
             width: 35%;
@@ -170,6 +182,9 @@
                  line-height:135%;
                  margin:0;
              }
+            @include large-desctop{   
+            font-size:2.2em;
+        }
              }          
 }
 

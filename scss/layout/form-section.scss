@@ -70,7 +70,10 @@
             border-radius:0;
             width:50%;
             background: rgba(0, 0, 0, 0.45);
-         }   
+         }  
+         @include large-desctop{
+             font-size:5.2em;
+        }
         }
     &__paragraph{
         font-size:1.6em;
@@ -98,6 +101,9 @@
         @include desctop{
             font-size:1.8em;
         }   
+         @include large-desctop{
+             font-size:2.2em;
+        }
         &--error{
             width:80%;
             margin:0 auto;
@@ -131,6 +137,10 @@
                  font-size:1.6em;
                  margin-left:-12%;
              }
+            @include large-desctop{
+                font-size:2em;
+                border-width:4px;
+            }
             }}
     &__wrapper-content{
         @include small-tablet-landscape{ 
@@ -186,6 +196,9 @@
            font-size:1.6em;
            margin-top:2%;
         } 
+         @include large-desctop{
+             font-size:2.2em;
+        }
         }
     &__label{
         display:block;
@@ -208,6 +221,9 @@
         @include desctop{
            font-size:2em;
         } 
+         @include large-desctop{
+             font-size:3em;
+        }
         }
     &__submit-button{
         display:block;
@@ -264,6 +280,15 @@
                  top: -12%;
                  right: 4%;
                 } 
+                 @include large-desctop{
+                  transform: scale(0.45, 0.45); 
+                    top:0;
+                     right:12%;
+                }
+                @include larger-desctop{
+                    top:5%;
+                    right:18%;
+                }
                 &--transition{
                    transform: scale(0.25, 0.25) translateY(-150px); 
                     transition:1s  ease;
@@ -274,6 +299,13 @@
                     @include desctop{
                         transform: scale(0.3, 0.3) translateY(-150px); 
                         transition:1s  ease;
+                    }
+                   @include large-desctop{
+                  transform: scale(0.4, 0.4);
+                       top:-5%;
+                    }
+                    @include larger-desctop{
+                        top:0;
                     }
                 }}
         
