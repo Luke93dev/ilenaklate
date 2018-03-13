@@ -28,22 +28,9 @@
     position:relative;
     z-index:-2;
     overflow:hidden;
-    //border-bottom:5px solid red;
     @include desctop{
     height:100%;
     }
-   /* &:after{
-       content: "";
-        width: 60%;
-        height: 100%;
-        border-bottom: 5px solid red;
-        margin: 0 auto;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 20%;
-        z-index: 100;
-    }*/
     &__list{
         transform: translateY(-270px);
         position:absolute;
@@ -113,25 +100,10 @@
               content: "";
               background-color: red;
               }
-           /* &:after{
-              transition: all 0.35s ease;
-              left: 0;
-              top: 0;
-              padding: 0.5em 0;
-              position: absolute;
-              content: attr(data-hover);
-              color: red;
-              white-space: nowrap;
-              width: 0%;
-              overflow: hidden;
-            }*/
             &:hover:before{
               opacity: 1;
               width: 185px;
             }
-            /*&:hover:after{
-              width: 185px;
-            }*/
             &--training{
                 flex-basis:16%;
                 padding-right:2%;
@@ -204,9 +176,7 @@
         @include desctop{
         height:100vh;
         max-height:100%;
-        background-position:left center;
-        //animation: background 12s cubic-bezier(.54,.35,.57,.77) infinite alternate;
-        //transform: scale(1.05);       
+        background-position:left center;    
         }
     }
     &__title{
@@ -250,7 +220,6 @@
     &__paragraph-wrapper{
         width: 90%;
         background: rgba(0, 0, 0, 0.65);
-        //overflow: hidden;
         padding:3%;
         font-size:24px; 
         margin:15% auto;

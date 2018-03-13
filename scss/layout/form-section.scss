@@ -1,8 +1,4 @@
 .main{
-   /* background-image: url(../images/b.png);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position:left;*/
     color:white; 
     position:relative;
     z-index:-1;
@@ -13,7 +9,6 @@
 .form-section{
     position:relative;
     padding:10% 0;
-     //   border-bottom:4px solid red;
     @include mobile-landscape{ 
         padding:5%;
     }
@@ -186,7 +181,6 @@
         }
         @include large-tablet-landscape{ 
             margin-bottom:5%;
-           //  font-size:1.8em;
          }
         @include desctop{
            font-size:1.6em;
