@@ -270,7 +270,6 @@
           document.body.scrollTop += distanceTo+0.99;
             
           if (!elem.lastScroll || elem.lastScroll >= Math.abs(distanceTo) && elem.lastScroll >= 0.6) {
-              console.log(elem.lastScroll)
             elem.lastScroll = Math.abs(distanceTo);
             setTimeout(function() { ScrollTo(elem);}, "65"); 
           } else {
