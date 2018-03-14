@@ -256,7 +256,7 @@
             reps = document.querySelector("#reps");
             reps_num = parseInt(reps.value);
 
-            if (isNaN(weight_num) || weight_num < 40 || weight_num > 250) {
+            if (!(/^\d{2,3}$/.test(weight.value) && (weight_num >= 40 && weight_num <= 250))) {
                 text = "Wartość powinna być liczbą całkowitą i powinna zawierać się w przedziale 40-250kg.";
                 setTimeout(function() {
                     window.location = "index.html#forms"
