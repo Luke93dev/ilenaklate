@@ -1,284 +1,320 @@
 <!DOCTYPE html>
 <html lang="pl">
-    <head>
-        <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="description" content="Oblicz swojego max'a w wyciskaniu na klatkę i zapoznaj się z przykładowym treningiem przed biciem rekordu"/>
-        <meta name="keywords" content="Wyciskanie,wyciskanie na ławeczce,wyciskanie na płaskiej,ciężar maksymalny w wyciskaniu na ławeczce"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/styles.css">
-        <link href="https://fonts.googleapis.com/css?family=Passion+One:700,900" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Chelsea+Market&amp;subset=latin-ext" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Oswald&amp;subset=latin-ext" rel="stylesheet">
-        <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-        <title>Kalkulator wyciskania na ławeczce płaskiej</title>
-    </head>
-    <body>
-     <div class="header__background-picture"></div> 
-        <header class="header" id="header">
-            <nav class="nav">
-                <div class="anim-button" >
-                    <div class="anim-button__bar anim-button__bar1 "></div>
-                    <div class="anim-button__bar anim-button__bar2"></div>
-                    <div class="anim-button__bar anim-button__bar3"></div>  
-                </div>
-                
-                <ul class="header__list">
-                    <li class="header__list-item"><a class="header__link"  id="to_calc" href="#">Kalkulator wyciskania</a></li>
-                    <li class="header__list-item header__list-item--training"><a class="header__link" id="to_training" href="#">Plan treningowy</a></li>
-                    <li class="header__list-item header__list-item--contact"><a class="header__link" id="to_footer" href="#">Kontakt</a></li>
-                </ul>      
-            </nav>
-            <div class="header__content">
-                <h1 class="header__title">IleNaKlate.pl</h1>
-                <div class="header__paragraph-wrapper">
-                   <p class="header__paragraph header__paragraph--first">Często po skończonym dobrym treningu klatki piersiowej zastanawiamy się: "Ciekawe ile teraz by poszło na max'a".</p>
-                   <p class="header__paragraph">Sam miałem kiedyś podobne dylematy i dlatego właśnie  udostępniam ten prosty kalkulator. Wyniki traktuj z przymrużeniem oka i bierz poprawkę na swoje indywidualne predyspozycje. Udanego bicia rekordów!
-                   </p>               
-                   </div>   
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Oblicz swojego max'a w wyciskaniu na klatkę i zapoznaj się z przykładowym treningiem przed biciem rekordu" />
+    <meta name="keywords" content="Wyciskanie,wyciskanie na ławeczce,wyciskanie na płaskiej,ciężar maksymalny w wyciskaniu na ławeczce" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Passion+One:700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chelsea+Market&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <title>Kalkulator wyciskania na ławeczce płaskiej</title>
+</head>
+
+<body>
+    <div class="header__background-picture"></div>
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="anim-button">
+                <div class="anim-button__bar anim-button__bar1 "></div>
+                <div class="anim-button__bar anim-button__bar2"></div>
+                <div class="anim-button__bar anim-button__bar3"></div>
             </div>
-            <div class="arrow-button arrow-button--down"><i class="fas fa-chevron-circle-down"></i></div>     </header>
-        
-          <main id="main" class="main">
-             <section class="form-section" id="forms">
-                  <h2 class="form-section__title"> Kalkulator wyciskania </h2> 
-                  <p class="form-section__paragraph">Podaj ciężar oraz liczbę powtórzeń z Twojego ostatniego treningu.<br/> Posłuży to do obliczenia przybliżonego maksymalnego ciężaru jaki będziesz w stanie wycisnąć.</p>
-                <div class="form-section__wrapper-content">
-                 <form class="form-section__form">
-                   <fieldset class="form-section__fieldset">
-                     <label class="form-section__label" for='weight'>Ciężar [kg]</label>
-                     <input type='text' name='weight' id='weight' class="form-section__input" maxlength="3"  required/>
-                    <label class="form-section__label" for='reps'>Liczba powtórzeń</label>
-                    <select name='reps' id='reps' class="form-section__input form-section__input--slider">
-                              <option value='2'>2</option>
-                              <option value='3'>3</option>
-                              <option value='4'>4</option>
-                              <option value='5'>5</option>
-                             <option value='6'>6</option>
-                            <option value='7'>7</option>
+
+            <ul class="header__list">
+                <li class="header__list-item"><a class="header__link" id="to_calc" href="#">Kalkulator wyciskania</a></li>
+                <li class="header__list-item header__list-item--training"><a class="header__link" id="to_training" href="#">Plan treningowy</a></li>
+                <li class="header__list-item header__list-item--contact"><a class="header__link" id="to_footer" href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div class="header__content">
+            <h1 class="header__title">IleNaKlate.pl</h1>
+            <div class="header__paragraph-wrapper">
+                <p class="header__paragraph header__paragraph--first">Często po skończonym dobrym treningu klatki piersiowej zastanawiamy się: "Ciekawe ile teraz by poszło na max'a".</p>
+                <p class="header__paragraph">Sam miałem kiedyś podobne dylematy i dlatego właśnie udostępniam ten prosty kalkulator. Wyniki traktuj z przymrużeniem oka i bierz poprawkę na swoje indywidualne predyspozycje. Udanego bicia rekordów!
+                </p>
+            </div>
+        </div>
+        <div class="arrow-button arrow-button--down"><i class="fas fa-chevron-circle-down"></i></div>
+    </header>
+
+    <main id="main" class="main">
+        <section class="form-section" id="forms">
+            <h2 class="form-section__title"> Kalkulator wyciskania </h2>
+            <p class="form-section__paragraph">Podaj ciężar oraz liczbę powtórzeń z Twojego ostatniego treningu.<br/> Posłuży to do obliczenia przybliżonego maksymalnego ciężaru jaki będziesz w stanie wycisnąć.</p>
+            <div class="form-section__wrapper-content">
+                <form class="form-section__form">
+                    <fieldset class="form-section__fieldset">
+                        <label class="form-section__label" for='weight'>Ciężar [kg]</label>
+                        <input type='text' name='weight' id='weight' class="form-section__input" maxlength="3" required/>
+                        <label class="form-section__label" for='reps'>Liczba powtórzeń</label>
+                        <select name='reps' id='reps' class="form-section__input form-section__input--slider">
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                                <option value='5'>5</option>
+                                <option value='6'>6</option>
+                                <option value='7'>7</option>
                                 <option value='8' selected>8</option>
                                 <option value='9'>9</option>
                                 <option value='10'>10</option>
                                 </select>
 
-                     <button type="button" id="form_button" class="form-section__submit-button">Oblicz</button>      
-                 </fieldset>
-                </form>
-                    <div class="form-section__wrapper-content2">
-                    <div id="image" class="form-section__image form-section__image--transition"></div>  
-                    <p id="message" class="form-section__paragraph form-section__paragraph--error"></p>
-                    </div></div>
-                     </section>   
-                
-              
-                <section id="results" class="results-section">
-                    <h2 class="results-section__title">Twój maksymalny ciężar w jednym powtórzeniu to</h2>
-                    <h3 class="results-section__result"><span id="max"></span> kg</h3>
-                    <div class="results-section__wrapper-results">
-                        <div class="results-section__wrapper-paragraphs">
-                    <p class="results-section__paragraph results-section__paragraph--first">80% maksymalnego powtórzenia - <span id="80p"></span> kg</p>
-                    <p class="results-section__paragraph">90% maksymalnego powtórzenia - <span id="90p"></span> kg</p>
-                    <p class="results-section__paragraph results-section__paragraph--last">110% maksymalnego powtórzenia - <span id="110p"></span> kg</p></div>
-                    <p class="results-section__paragraph results-section__paragraph--advice">Wyniki nie muszą (i prawdopodobnie nie będą) odzwierciedlać Twojego max'a w 100%, jest to uwarunkowane indywidualnymi predyspozycjami tj.długość ramion, czy naturalna zdolność do lepszego radzenia sobie z dużymi ciężarami przy małej ilości powtórzeń. Mimo to, jest to świetne narzędzie pomocne w rozpisaniu treningu oraz do wstępnego oszacowania jaki ciężar można zaatakować :) </p>
-                        </div>
-                </section>
-            <section id="advices-section" class="advices-section">
-                <h2 class="advices-section__title">Porady treningowe</h2>
-                <h4 class ="advices-section__subtitle"> Jak przygotować się do bicia rekordu?</h4>
-                <p class ="advices-section__paragraph"> Porady kierowane są do osób początkujących - jeżeli jesteś taką osobą i chcesz poświęcić jeden trening, aby uzyskać jak najlepszy wynik w wyciskaniu na klatkę - zapraszam do zapoznania się z rozpiską.</p>
-                
-                <h4 class ="advices-section__subtitle"> Trochę teorii</h4>
-                <p class ="advices-section__paragraph"> Zastanówmy się najpierw co jest przyczyną tego, że w momencie próby bicia rekordu na klatkę sporą część osób sztanga "przygniata". Hmm? Oczywiście pierwszą przyczyną jest zbyt duży ciężar nieadekwatny do wypracowanej na treningach formy - to jasne, ale zaraz po tym równie często zawodzi nas... głowa :) <br>
-                Osoby początkujące trenując klatkę piersiową najczęściej trzymają się zakresu 8-12 powtórzeń. Nie ma w tym nic złego, ale w trakcie bicia rekordu wykonuje się tylko jedno powtórzenie z dużo większym obciążeniem... Nasz układ nerwowy i głowa(mentalnie) nie są przygotowane do radzenia sobie z takim ciężarem ponieważ nigdy nie miały z nim do czynienia. Nasuwa się więc jeden wniosek:
-                    Chcesz dobrze wyciskać duże ciężary? - <span style="color:red;font-weight:900">Wyciskaj duże ciężary</span>
-                </p>
-                
-                 <h4 class ="advices-section__subtitle"> 1 trening przed biciem rekordu</h4>
-                <p class ="advices-section__paragraph"> Cóż... czasu jest mało, ale nawet jeden odpowiedni trening może dać bardzo fajne efekty.</p>
-                <p class ="advices-section__paragraph">Trening ma na celu przyzwyczajenie do większych ciężarów, najlepiej wykonać go 3 dni przed planowanym biciem rekordu i co ważne - to nie ma być trenowanie do upadku mięśniowego, w dniu bicia rekordu trzeba być maksymalnie wypoczętym!</p>
-                
-                <h5 class ="advices-section__subtitle advices-section__subtitle--training">Trening</h5>
-                <ul class ="advices-section__list advices-section__list--training">
-                    <li class ="advices-section__list-item1">Rozgrzewka</li>
-                    <li class ="advices-section__list-item1">10 x 50%CM</li>
-                    <li class ="advices-section__list-item1">6 x 60%CM</li>
-                   <li class ="advices-section__list-item1">4 x 70%CM</li>
-                    <li class ="advices-section__list-item1">2 x 80%CM</li>
-                    <li class ="advices-section__list-item1">1 x 90%CM</li>
-                    <li class ="advices-section__list-item1">3 powtórzenia z zakresem ruchu 10-15cm z ciężarem 100%CM</li>
-                    <li>Trzymanie sztangi na wyprostowanych ramionach przez 10s z ciężarem 110%CM</li>
-                </ul>
-                <h5 class ="advices-section__subtitle">Wskazówki</h5>
-                <ul class ="advices-section__list advices-section__list--hints">
-                    <li class = "advices-section__list-item2">Ostatnie serie koniecznie wykonuj z osobą asekurującą.</li>
-                    <li class = "advices-section__list-item2">Przy serii z 100%CM zakres ruchu nie musi być duży, ważne żeby powoli się przyzwyczajać do ruchów z takim obciążeniem.</li>
-                    <li class = "advices-section__list-item2"> Przy trzymaniu sztangi, ani ogólnie przy wyciskaniu nigdy nie blokuj stawów w łokciach, ręce powinny być zawsze delikatnie ugięte - dbaj o swoje stawy.</li>
-                </ul>
-            </section>
-        </main> 
-            <footer id="footer" class="footer">
-              <h2 class="footer__title">Kontakt</h2>
-              <p class="footer__paragraph">Jeżeli masz jakieś uwagi / pytania dotyczące działania lub samej zawartości strony - skontaktuj się ze mną :)</p>
-                
-               <div class="footer__form-header">Formularz kontaktowy</div>
-               <form action="https://formspree.io/jopjop1234@o2.pl" method="POST">
-                    <fieldset class="footer__fieldset">
-                        <input type='text' name='mail' placeholder="Twój Email" id='mail' class="footer__input footer__input--mail" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+"/>
-                        <textarea class="footer__input footer__input--text" name="message-content" rows="5" placeholder="Treść Wiadomości" required=""></textarea>
-                        <button type="submit" id="message_button" class="footer__submit-button">Wyślij wiadomość</button>      
+                        <button type="button" id="form_button" class="form-section__submit-button">Oblicz</button>
                     </fieldset>
                 </form>
-            </footer>
-           <div class="arrow-button-up"><i class="fas fa-angle-double-up"></i></div> 
-        <div class="hideAll" id="hideAll"><div class="loader"></div></div>
-            
-        
-        <script>
-         window.onload = function(){
-              hideAll.style.display = "none";
-         }
-             
-            //Eventy dla paska nawigacji
-             document.getElementById('to_calc').addEventListener('click', function(){Scroll('forms')}) 
-            document.getElementById('to_training').addEventListener('click', function(){Scroll('advices-section')})
-            document.getElementById('to_footer').addEventListener('click', function(){Scroll('footer')})  
-            
-          ////////////////////////////////////////////////////   
-    
+                <div class="form-section__wrapper-content2">
+                    <div id="image" class="form-section__image form-section__image--transition"></div>
+                    <p id="message" class="form-section__paragraph form-section__paragraph--error"></p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="results" class="results-section">
+            <h2 class="results-section__title">Twój maksymalny ciężar w jednym powtórzeniu to</h2>
+            <h3 class="results-section__result"><span id="max"></span> kg</h3>
+            <div class="results-section__wrapper-results">
+                <div class="results-section__wrapper-paragraphs">
+                    <p class="results-section__paragraph results-section__paragraph--first">80% maksymalnego powtórzenia - <span id="80p"></span> kg</p>
+                    <p class="results-section__paragraph">90% maksymalnego powtórzenia - <span id="90p"></span> kg</p>
+                    <p class="results-section__paragraph results-section__paragraph--last">110% maksymalnego powtórzenia - <span id="110p"></span> kg</p>
+                </div>
+                <p class="results-section__paragraph results-section__paragraph--advice">Wyniki nie muszą (i prawdopodobnie nie będą) odzwierciedlać Twojego max'a w 100%, jest to uwarunkowane indywidualnymi predyspozycjami tj.długość ramion, czy naturalna zdolność do lepszego radzenia sobie z dużymi ciężarami przy małej ilości powtórzeń. Mimo to, jest to świetne narzędzie pomocne w rozpisaniu treningu oraz do wstępnego oszacowania jaki ciężar można zaatakować :) </p>
+            </div>
+        </section>
+        <section id="advices-section" class="advices-section">
+            <h2 class="advices-section__title">Porady treningowe</h2>
+            <h4 class="advices-section__subtitle"> Jak przygotować się do bicia rekordu?</h4>
+            <p class="advices-section__paragraph"> Porady kierowane są do osób początkujących - jeżeli jesteś taką osobą i chcesz poświęcić jeden trening, aby uzyskać jak najlepszy wynik w wyciskaniu na klatkę - zapraszam do zapoznania się z rozpiską.</p>
+
+            <h4 class="advices-section__subtitle"> Trochę teorii</h4>
+            <p class="advices-section__paragraph"> Zastanówmy się najpierw co jest przyczyną tego, że w momencie próby bicia rekordu na klatkę sporą część osób sztanga "przygniata". Hmm? Oczywiście pierwszą przyczyną jest zbyt duży ciężar nieadekwatny do wypracowanej na treningach formy - to jasne, ale zaraz po tym równie często zawodzi nas... głowa :) <br> Osoby początkujące trenując klatkę piersiową najczęściej trzymają się zakresu 8-12 powtórzeń. Nie ma w tym nic złego, ale w trakcie bicia rekordu wykonuje się tylko jedno powtórzenie z dużo większym obciążeniem... Nasz układ nerwowy i głowa(mentalnie) nie są przygotowane do radzenia sobie z takim ciężarem ponieważ nigdy nie miały z nim do czynienia. Nasuwa się więc jeden wniosek: Chcesz dobrze wyciskać duże ciężary? - <span style="color:red;font-weight:900">Wyciskaj duże ciężary</span>
+            </p>
+
+            <h4 class="advices-section__subtitle"> 1 trening przed biciem rekordu</h4>
+            <p class="advices-section__paragraph"> Cóż... czasu jest mało, ale nawet jeden odpowiedni trening może dać bardzo fajne efekty.</p>
+            <p class="advices-section__paragraph">Trening ma na celu przyzwyczajenie do większych ciężarów, najlepiej wykonać go 3 dni przed planowanym biciem rekordu i co ważne - to nie ma być trenowanie do upadku mięśniowego, w dniu bicia rekordu trzeba być maksymalnie wypoczętym!</p>
+
+            <h5 class="advices-section__subtitle advices-section__subtitle--training">Trening</h5>
+            <ul class="advices-section__list advices-section__list--training">
+                <li class="advices-section__list-item1">Rozgrzewka</li>
+                <li class="advices-section__list-item1">10 x 50%CM</li>
+                <li class="advices-section__list-item1">6 x 60%CM</li>
+                <li class="advices-section__list-item1">4 x 70%CM</li>
+                <li class="advices-section__list-item1">2 x 80%CM</li>
+                <li class="advices-section__list-item1">1 x 90%CM</li>
+                <li class="advices-section__list-item1">3 powtórzenia z zakresem ruchu 10-15cm z ciężarem 100%CM</li>
+                <li>Trzymanie sztangi na wyprostowanych ramionach przez 10s z ciężarem 110%CM</li>
+            </ul>
+            <h5 class="advices-section__subtitle">Wskazówki</h5>
+            <ul class="advices-section__list advices-section__list--hints">
+                <li class="advices-section__list-item2">Ostatnie serie koniecznie wykonuj z osobą asekurującą.</li>
+                <li class="advices-section__list-item2">Przy serii z 100%CM zakres ruchu nie musi być duży, ważne żeby powoli się przyzwyczajać do ruchów z takim obciążeniem.</li>
+                <li class="advices-section__list-item2"> Przy trzymaniu sztangi, ani ogólnie przy wyciskaniu nigdy nie blokuj stawów w łokciach, ręce powinny być zawsze delikatnie ugięte - dbaj o swoje stawy.</li>
+            </ul>
+        </section>
+    </main>
+    <footer id="footer" class="footer">
+        <h2 class="footer__title">Kontakt</h2>
+        <p class="footer__paragraph">Jeżeli masz jakieś uwagi / pytania dotyczące działania lub samej zawartości strony - skontaktuj się ze mną :)</p>
+
+        <div class="footer__form-header">Formularz kontaktowy</div>
+        <form action="https://formspree.io/jopjop1234@o2.pl" method="POST">
+            <fieldset class="footer__fieldset">
+                <input type='text' name='mail' placeholder="Twój Email" id='mail' class="footer__input footer__input--mail" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" />
+                <textarea class="footer__input footer__input--text" name="message-content" rows="5" placeholder="Treść Wiadomości" required=""></textarea>
+                <button type="submit" id="message_button" class="footer__submit-button">Wyślij wiadomość</button>
+            </fieldset>
+        </form>
+    </footer>
+    <div class="arrow-button-up"><i class="fas fa-angle-double-up"></i></div>
+    <div class="hideAll" id="hideAll">
+        <div class="loader"></div>
+    </div>
+
+
+    <script>
+        window.onload = function() {
+            hideAll.style.display = "none";
+        }
+
+        //Eventy dla paska nawigacji
+        document.getElementById('to_calc').addEventListener('click', function() {
+            Scroll('forms')
+        })
+        document.getElementById('to_training').addEventListener('click', function() {
+            Scroll('advices-section')
+        })
+        document.getElementById('to_footer').addEventListener('click', function() {
+            Scroll('footer')
+        })
+
+        ////////////////////////////////////////////////////   
+
         // Dynamiczne dodawanie/usuwanie klas po wczytaniu strony + deklaracja zmiennych używanych w kilku miejscach skryptu
-            
-            results.classList.add('hide');
-            message.classList.add('hide');
-            image.classList.remove('form-section__image--transition');
-          
-            const list = document.querySelector('.header__list');
-            const anim_button = document.querySelector('.anim-button');
-            
-            ///////////////////////////////////////////////////
-            
-            // Menu hamburgerowe - urządzenia mobilne
-            
-            anim_button.addEventListener('click', classToggle);
-            function classToggle() {
-                
-                list.classList.toggle('anim-button--slide');
-                this.classList.toggle('anim-button__bar--click');
-                document.querySelector('.nav').classList.toggle('border');
+
+        results.classList.add('hide');
+        message.classList.add('hide');
+        image.classList.remove('form-section__image--transition');
+
+        const list = document.querySelector('.header__list');
+        const anim_button = document.querySelector('.anim-button');
+
+        ///////////////////////////////////////////////////
+
+        // Menu hamburgerowe - urządzenia mobilne
+
+        anim_button.addEventListener('click', classToggle);
+
+        function classToggle() {
+
+            list.classList.toggle('anim-button--slide');
+            this.classList.toggle('anim-button__bar--click');
+            document.querySelector('.nav').classList.toggle('border');
+        }
+
+        ////////////////////////////////////////////////////
+
+        // Schowanie rozwiniętego menu hamburgerowego w przypadku, gdy użytkownik przewinie stronę
+
+        window.addEventListener('scroll', removeClass);
+
+        function removeClass() {
+            if (document.documentElement.scrollTop || document.body.scrollTop >= 169) {
+                list.classList.remove('anim-button--slide');
+                anim_button.classList.remove('anim-button__bar--click');
             }
-            
-           ////////////////////////////////////////////////////
-            
-           // Schowanie rozwiniętego menu hamburgerowego w przypadku, gdy użytkownik przewinie stronę
-            
-          window.addEventListener('scroll',removeClass);
-            
-            function removeClass() {
-                 if(document.documentElement.scrollTop || document.body.scrollTop>=169){
-                       list.classList.remove('anim-button--slide');
-                        anim_button.classList.remove('anim-button__bar--click');}
-                    };
-            
+        };
+
         ///////////////////////////////////////////////////////    
-            
+
         // Pojawianie się przycisku do powrotu na górę strony po przewinicięciu w dół, dla wszystkich urządzeń, poza telefonami o orientacji pionowej //
-            
-            const mobileViewport = window.matchMedia("screen and (min-width: 600px)");
-            const buttonUp = document.querySelector(".arrow-button-up")
-           
-            function ToggleClass(){if (document.documentElement.scrollTop || document.body.scrollTop > 500){ buttonUp.style.opacity = "1";} else buttonUp.style.opacity = "0";}
-            
-        window.addEventListener('scroll', function(){if(mobileViewport.matches){ToggleClass()}else{buttonUp.style.display="none";}})
-            
-                       
-            ////////////////////////////////////////////////////
-        
-           // Poruszanie się po stronie góra - dół za pomocą arrow buttons
-            
-           document.querySelector('.fa-chevron-circle-down').addEventListener('click', function(){Scroll('forms')});
-                  
-     
-         document.querySelector('.fa-angle-double-up').addEventListener('click', function(){setTimeout((function(){document.documentElement.scrollTop=0;}),700);Scroll('header')});
-        
-        
-          //////////////////////////////
-             // Część kalkulatora // 
-          //////////////////////////////
-            
-           /* Fragment kodu poniżej zapobiega przejściu do góry strony (próba wysłania formularza) i wywołuje funkcję calculate po naciśnięciu klawisza Enter */ 
-            
-            document.getElementById('weight').addEventListener('keypress', function(event) {
-                if (event.keyCode == 13) {
-                    event.preventDefault();
-                    calculate();
+
+        const mobileViewport = window.matchMedia("screen and (min-width: 600px)");
+        const buttonUp = document.querySelector(".arrow-button-up")
+
+        function ToggleClass() {
+            if (document.documentElement.scrollTop || document.body.scrollTop > 500) {
+                buttonUp.style.opacity = "1";
+            } else buttonUp.style.opacity = "0";
+        }
+
+        window.addEventListener('scroll', function() {
+            if (mobileViewport.matches) {
+                ToggleClass()
+            } else {
+                buttonUp.style.display = "none";
+            }
+        })
+
+
+        ////////////////////////////////////////////////////
+
+        // Poruszanie się po stronie góra - dół za pomocą arrow buttons
+
+        document.querySelector('.fa-chevron-circle-down').addEventListener('click', function() {
+            Scroll('forms')
+        });
+
+
+        document.querySelector('.fa-angle-double-up').addEventListener('click', function() {
+            setTimeout((function() {
+                document.documentElement.scrollTop = 0;
+            }), 700);
+            Scroll('header')
+        });
+
+
+        //////////////////////////////
+        // Część kalkulatora // 
+        //////////////////////////////
+
+        /* Fragment kodu poniżej zapobiega przejściu do góry strony (próba wysłania formularza) i wywołuje funkcję calculate po naciśnięciu klawisza Enter */
+
+        document.getElementById('weight').addEventListener('keypress', function(event) {
+            if (event.keyCode == 13) {
+                event.preventDefault();
+                calculate();
+            }
+        });
+        /////////////////////////////////////////////////////////////
+
+
+        /* Funkcja wykonująca potrzebne obliczenia kalulatora. Uwzględnia prostą walidację pola formularza (typ number i odpowiedni zakres wprowadzonej wartości) */
+        document.querySelector('#form_button').addEventListener('click', calculate);
+
+        function calculate() {
+            let weight, weight_num, reps, reps_num, text, result;
+            weight = document.querySelector("#weight");
+            weight_num = parseInt(weight.value);
+            reps = document.querySelector("#reps");
+            reps_num = parseInt(reps.value);
+
+            if (isNaN(weight_num) || weight_num < 40 || weight_num > 250) {
+                text = "Wartość powinna być liczbą całkowitą i powinna zawierać się w przedziale 40-250kg.";
+                setTimeout(function() {
+                    window.location = "index.html#forms"
+                }, 200);
+                results.classList.add('hide');
+
+                message.innerHTML = text;
+                image.classList.add("form-section__image--transition");
+                message.classList.remove('hide');
+            } else {
+                if (reps_num == 2) {
+                    result = Math.round(weight_num * 1.07);
+                    document.getElementById("max").innerHTML = result;
+
+                } else {
+                    result = Math.round(weight_num * (1.03 + reps_num * 0.03));
+                    document.getElementById("max").innerHTML = result;
                 }
-            });
-            /////////////////////////////////////////////////////////////
-            
-            
-            /* Funkcja wykonująca potrzebne obliczenia kalulatora. Uwzględnia prostą walidację pola formularza (typ number i odpowiedni zakres wprowadzonej wartości) */
-              document.querySelector('#form_button').addEventListener('click', calculate);
-            
-            function calculate(){
-                let weight, weight_num, reps, reps_num,text,result;
-                weight = document.querySelector("#weight");
-                weight_num=parseInt(weight.value);
-                reps = document.querySelector("#reps");
-                reps_num=parseInt(reps.value);
-                
-                   if (isNaN(weight_num) || weight_num < 40 || weight_num > 250) {
-                       text = "Wartość powinna być liczbą całkowitą i powinna zawierać się w przedziale 40-250kg.";
-                       setTimeout(function(){window.location = "index.html#forms"},200);
-                      results.classList.add('hide');
-                       
-                       message.innerHTML = text;
-                       image.classList.add("form-section__image--transition");
-                       message.classList.remove('hide');
-                      } 
-                    else {
-                       if (reps_num==2){
-                           result = Math.round(weight_num*1.07);
-                           document.getElementById("max").innerHTML = result; 
-                           
-                       } else {
-                           result = Math.round(weight_num*(1.03 + reps_num * 0.03));
-                            document.getElementById("max").innerHTML = result;
-                           }
-                       results.classList.remove('hide');
-                       image.classList.remove("form-section__image--transition");
-                       message.classList.add('hide'); 
-                        setTimeout(function(){Scroll('results')},200); 
-                    }
-                
-                    document.getElementById("80p").innerHTML = Math.round(result*0.8); 
-                    document.getElementById("90p").innerHTML = Math.round(result*0.9); 
-                    document.getElementById("110p").innerHTML = Math.round(result*1.1); 
-                       }
+                results.classList.remove('hide');
+                image.classList.remove("form-section__image--transition");
+                message.classList.add('hide');
+                setTimeout(function() {
+                    Scroll('results')
+                }, 200);
+            }
+
+            document.getElementById("80p").innerHTML = Math.round(result * 0.8);
+            document.getElementById("90p").innerHTML = Math.round(result * 0.9);
+            document.getElementById("110p").innerHTML = Math.round(result * 1.1);
+        }
         ////////////////////////////////////////////////////////////////
-            
+
         /* Funkcja służąca do płynnego scrollowania */
-            
+
         function Scroll(name) {
-          ScrollTo(document.getElementById(name));
+            ScrollTo(document.getElementById(name));
         }
 
         function ScrollTo(elem) {
-           
-          let distanceTo = parseFloat(elem.getBoundingClientRect().top*0.5);
-            
-          document.documentElement.scrollTop+= distanceTo+0.99;
-          document.body.scrollTop += distanceTo+0.99;
-            
-          if (!elem.lastScroll || elem.lastScroll >= Math.abs(distanceTo) && elem.lastScroll >= 0.6) {
-            elem.lastScroll = Math.abs(distanceTo);
-            setTimeout(function() { ScrollTo(elem);}, "65"); 
-          } else {
-            elem.lastScroll = null;             
-          }     
+
+            let distanceTo = parseFloat(elem.getBoundingClientRect().top * 0.5);
+
+            document.documentElement.scrollTop += distanceTo + 0.99;
+            document.body.scrollTop += distanceTo + 0.99;
+
+            if (!elem.lastScroll || elem.lastScroll >= Math.abs(distanceTo) && elem.lastScroll >= 0.6) {
+                elem.lastScroll = Math.abs(distanceTo);
+                setTimeout(function() {
+                    ScrollTo(elem);
+                }, "65");
+            } else {
+                elem.lastScroll = null;
+            }
         }
-            
-        </script>
-                                    
-        
-    </body>
+
+    </script>
+
+
+</body>
+
 </html>
